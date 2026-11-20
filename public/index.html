@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Productos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <main class="contenedor">
+    <div class="tarjeta">
+
+      <h1>Gestor de Productos</h1>
+      <p>Administra tus productos fácilmente</p>
+
+      <h2>Iniciar sesión</h2>
+
+      <form id="loginForm">
+        <input
+          type="email"
+          id="email"
+          placeholder="Correo electrónico"
+          required
+        >
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Contraseña"
+          required
+        >
+
+        <button type="submit">
+          Iniciar sesión
+        </button>
+      </form>
+
+      <h2>Crear cuenta</h2>
+
+      <form id="registroForm">
+        <input
+          type="text"
+          id="nombreRegistro"
+          placeholder="Nombre completo"
+          required
+        >
+
+        <input
+          type="email"
+          id="emailRegistro"
+          placeholder="Correo electrónico"
+          required
+        >
+
+        <input
+          type="password"
+          id="passwordRegistro"
+          placeholder="Contraseña (mínimo 8 caracteres)"
+          minlength="8"
+          required
+        >
+
+        <button type="submit">
+          Registrarse
+        </button>
+      </form>
+
+      <p id="mensaje" role="status"></p>
+
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+
+</body>
+</html>

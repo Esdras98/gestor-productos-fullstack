@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Productos | Gestor de Productos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <main class="contenedor panel-contenedor">
+    <section class="tarjeta panel">
+
+      <header class="panel-header">
+        <div>
+          <h1>Gestor de Productos</h1>
+          <p>Panel de administración</p>
+        </div>
+
+        <button id="cerrarSesion" class="btn-salir">
+          Cerrar sesión
+        </button>
+      </header>
+
+      <h2 id="tituloFormulario">Agregar producto</h2>
+
+      <form id="productoForm">
+        <input
+          type="text"
+          id="nombre"
+          placeholder="Nombre del producto"
+          required
+        >
+
+        <input
+          type="text"
+          id="descripcion"
+          placeholder="Descripción"
+        >
+
+        <input
+          type="number"
+          id="precio"
+          placeholder="Precio"
+          min="0"
+          step="0.01"
+          required
+        >
+
+        <input
+          type="number"
+          id="stock"
+          placeholder="Cantidad en stock"
+          min="0"
+          step="1"
+          required
+        >
+
+        <button type="submit" id="guardarProducto">
+          Guardar producto
+        </button>
+
+        <button type="button" id="cancelarEdicion"
+                class="btn-secundario" hidden>
+          Cancelar edición
+        </button>
+      </form>
+
+      <p id="mensajeProducto" role="status"></p>
+
+      <h2>Mis productos</h2>
+
+      <div id="listaProductos" class="lista-productos">
+        <p>Cargando productos...</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="/productos.js"></script>
+
+</body>
+</html>
